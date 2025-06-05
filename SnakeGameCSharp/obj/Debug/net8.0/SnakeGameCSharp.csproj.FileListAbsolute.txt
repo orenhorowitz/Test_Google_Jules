@@ -1,0 +1,15 @@
+/app/SnakeGameCSharp/bin/Debug/net8.0/SnakeGameCSharp
+/app/SnakeGameCSharp/bin/Debug/net8.0/SnakeGameCSharp.deps.json
+/app/SnakeGameCSharp/bin/Debug/net8.0/SnakeGameCSharp.runtimeconfig.json
+/app/SnakeGameCSharp/bin/Debug/net8.0/SnakeGameCSharp.dll
+/app/SnakeGameCSharp/bin/Debug/net8.0/SnakeGameCSharp.pdb
+/app/SnakeGameCSharp/obj/Debug/net8.0/SnakeGameCSharp.GeneratedMSBuildEditorConfig.editorconfig
+/app/SnakeGameCSharp/obj/Debug/net8.0/SnakeGameCSharp.AssemblyInfoInputs.cache
+/app/SnakeGameCSharp/obj/Debug/net8.0/SnakeGameCSharp.AssemblyInfo.cs
+/app/SnakeGameCSharp/obj/Debug/net8.0/SnakeGameCSharp.csproj.CoreCompileInputs.cache
+/app/SnakeGameCSharp/obj/Debug/net8.0/SnakeGameCSharp.sourcelink.json
+/app/SnakeGameCSharp/obj/Debug/net8.0/SnakeGameCSharp.dll
+/app/SnakeGameCSharp/obj/Debug/net8.0/refint/SnakeGameCSharp.dll
+/app/SnakeGameCSharp/obj/Debug/net8.0/SnakeGameCSharp.pdb
+/app/SnakeGameCSharp/obj/Debug/net8.0/SnakeGameCSharp.genruntimeconfig.cache
+/app/SnakeGameCSharp/obj/Debug/net8.0/ref/SnakeGameCSharp.dll
