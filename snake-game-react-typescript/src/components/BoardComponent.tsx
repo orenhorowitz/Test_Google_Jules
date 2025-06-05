@@ -2,7 +2,11 @@ import React from 'react';
 import { GameBoard } from '../game-logic/GameBoard';
 import { Snake } from '../game-logic/Snake';
 import { Food } from '../game-logic/Food';
-import { Coordinates } from '../game-logic/types';
+// import { Coordinates } from '../game-logic/types'; // Coordinates not used in the new logic
+
+const SNAKE_HEAD_IMG = '/assets/snake-head.png';
+const SNAKE_BODY_IMG = '/assets/snake-body.png';
+const MOUSE_FOOD_IMG = '/assets/mouse-food.png';
 
 interface BoardComponentProps {
   board: GameBoard;
@@ -15,28 +19,31 @@ const BoardComponent: React.FC<BoardComponentProps> = ({ board, snake, food }) =
 
   for (let y = 0; y < board.height; y++) {
     for (let x = 0; x < board.width; x++) {
-      let cellType = 'empty';
-      const currentPos: Coordinates = { x, y };
+      // let cellType = 'empty'; // Not needed anymore
+      // const currentPos: Coordinates = { x, y }; // Not needed anymore
 
-      // Check for snake body
-      if (snake.body.some(segment => segment.x === x && segment.y === y)) {
-        cellType = 'snake';
-      }
-      // Check for snake head
-      if (snake.body[0].x === x && snake.body[0].y === y) {
-        cellType = 'snake-head';
-      }
-      // Check for food
-      else if (food.position.x === x && food.position.y === y) {
-        cellType = 'food';
+      let cellContent = null;
+      const isHead = snake.body[0].x === x && snake.body[0].y === y;
+      // Ensure snake.body exists and has elements before accessing slice
+      const isBody = snake.body && snake.body.length > 1 && snake.body.slice(1).some(segment => segment.x === x && segment.y === y);
+      const isFood = food.position.x === x && food.position.y === y;
+
+      if (isHead) {
+        cellContent = <img src={SNAKE_HEAD_IMG} alt="snake head" style={{ width: '100%', height: '100%' }} />;
+      } else if (isBody) {
+        cellContent = <img src={SNAKE_BODY_IMG} alt="snake body" style={{ width: '100%', height: '100%' }} />;
+      } else if (isFood) {
+        cellContent = <img src={MOUSE_FOOD_IMG} alt="food" style={{ width: '100%', height: '100%' }} />;
       }
 
       cells.push(
         <div
           key={`${x}-${y}`}
-          className={`cell ${cellType}`}
-          style={{ width: '20px', height: '20px', border: '1px solid #ccc' }} // Basic styling
-        ></div>
+          className="cell" // Keep basic cell class for grid layout
+          style={{ width: '20px', height: '20px', border: '1px solid #ccc', position: 'relative' }} // Added position relative for img positioning
+        >
+          {cellContent}
+        </div>
       );
     }
   }
