@@ -4,7 +4,9 @@ This project is a classic Snake game implemented using React and TypeScript.
 
 ## Quick Start
 
-Follow these steps to get the game running in under 2 minutes:
+Follow these steps to get the game running quickly:
+
+Make sure you are in the `snake-game-react-typescript` directory before running these commands.
 
 1.  **Install dependencies:**
     ```bash
