@@ -33,10 +33,6 @@ body {
   background-color: #1a1d22; /* Darker background for the board itself */
   border: 2px solid #61dafb !important; /* More prominent border */
   box-shadow: 0 0 15px #61dafb;
-  background-image: url('/assets/jungle-background.jpg');
-  background-size: cover; /* To make the image cover the entire board area */
-  background-position: center; /* To center the image */
-  background-repeat: no-repeat; /* To prevent the image from tiling */
 }
 
 .cell {
