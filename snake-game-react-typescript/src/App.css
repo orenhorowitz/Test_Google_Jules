@@ -33,6 +33,10 @@ body {
   background-color: #1a1d22; /* Darker background for the board itself */
   border: 2px solid #61dafb !important; /* More prominent border */
   box-shadow: 0 0 15px #61dafb;
+  background-image: url('/assets/jungle-background.jpg');
+  background-size: cover; /* To make the image cover the entire board area */
+  background-position: center; /* To center the image */
+  background-repeat: no-repeat; /* To prevent the image from tiling */
 }
 
 .cell {
@@ -48,22 +52,24 @@ body {
   background-color: #3a3f4a; /* Slightly lighter than board for empty cells */
 }
 
+/*
 .cell.snake-head {
-  background-color: #00ff00; /* Bright green for the head */
+  background-color: #00ff00; / Bright green for the head /
   border-radius: 3px;
   box-shadow: 0 0 5px #00ff00;
 }
 
 .cell.snake {
-  background-color: #33cc33; /* Slightly darker green for the body */
+  background-color: #33cc33; / Slightly darker green for the body /
   border-radius: 2px;
 }
 
 .cell.food {
-  background-color: #ff0000; /* Bright red for food */
-  border-radius: 50%; /* Circular food */
+  background-color: #ff0000; / Bright red for food /
+  border-radius: 50%; / Circular food /
   box-shadow: 0 0 8px #ff0000;
 }
+*/
 
 /* Score Component Styles */
 .score {
