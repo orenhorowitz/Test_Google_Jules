@@ -4,10 +4,6 @@ import { Snake } from '../game-logic/Snake';
 import { Food } from '../game-logic/Food';
 // import { Coordinates } from '../game-logic/types'; // Coordinates not used in the new logic
 
-const SNAKE_HEAD_IMG = '/assets/snake-head.png';
-const SNAKE_BODY_IMG = '/assets/snake-body.png';
-const MOUSE_FOOD_IMG = '/assets/mouse-food.png';
-
 interface BoardComponentProps {
   board: GameBoard;
   snake: Snake;
@@ -29,11 +25,11 @@ const BoardComponent: React.FC<BoardComponentProps> = ({ board, snake, food }) =
       const isFood = food.position.x === x && food.position.y === y;
 
       if (isHead) {
-        cellContent = <img src={SNAKE_HEAD_IMG} alt="snake head" style={{ width: '100%', height: '100%' }} />;
+        cellContent = <div style={{ width: '100%', height: '100%', backgroundColor: 'green' }}></div>;
       } else if (isBody) {
-        cellContent = <img src={SNAKE_BODY_IMG} alt="snake body" style={{ width: '100%', height: '100%' }} />;
+        cellContent = <div style={{ width: '100%', height: '100%', backgroundColor: 'lightgreen' }}></div>;
       } else if (isFood) {
-        cellContent = <img src={MOUSE_FOOD_IMG} alt="food" style={{ width: '100%', height: '100%' }} />;
+        cellContent = <div style={{ width: '100%', height: '100%', backgroundColor: 'red' }}></div>;
       }
 
       cells.push(
